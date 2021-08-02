@@ -1,0 +1,39 @@
+const path = require('path')
+
+module.exports = {
+    mode: 'development',
+    entry: {
+        'contexts': './src/contexts/index.js',
+        'components': { import: './src/components/index.js', /*dependOn: 'contexts'*/ }
+    },
+    target: 'node',
+    devtool: 'source-map',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js',
+        library: {
+            name: 'myLib',
+            type: 'umd',
+        }
+    },
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            }
+        ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
+    externals: {
+        react: {
+            commonjs: 'react',
+            commonjs2: 'react',
+            amd: 'react',
+            root: 'react'
+        }
+    }
+}
