@@ -4,7 +4,7 @@ module.exports = {
     mode: 'development',
     entry: {
         'contexts': './src/contexts/index.js',
-        'components': './src/components/index.js'
+        'components': { import: './src/components/index.js', /*dependOn: 'contexts'*/ }
     },
     target: 'node',
     devtool: 'source-map',

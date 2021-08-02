@@ -24,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _contexts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts */ "./src/contexts/index.js");
+/* harmony import */ var _myContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./myContext */ "./src/components/myContext.js");
 /* harmony import */ var _hooks_useMyContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/useMyContext */ "./src/hooks/useMyContext.js");
 
 
@@ -34,7 +34,7 @@ var MyProvider = function MyProvider(_ref) {
   var children = _ref.children;
   var value = (0,_hooks_useMyContext__WEBPACK_IMPORTED_MODULE_2__.default)();
   console.log('MyProvider :: value', value);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contexts__WEBPACK_IMPORTED_MODULE_1__.myContext.Provider, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_myContext__WEBPACK_IMPORTED_MODULE_1__.default.Provider, {
     value: value
   }, children);
 };
@@ -43,25 +43,10 @@ var MyProvider = function MyProvider(_ref) {
 
 /***/ }),
 
-/***/ "./src/contexts/index.js":
-/*!*******************************!*\
-  !*** ./src/contexts/index.js ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "myContext": () => (/* reexport safe */ _myContext__WEBPACK_IMPORTED_MODULE_0__.default)
-/* harmony export */ });
-/* harmony import */ var _myContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./myContext */ "./src/contexts/myContext.js");
-
-
-/***/ }),
-
-/***/ "./src/contexts/myContext.js":
-/*!***********************************!*\
-  !*** ./src/contexts/myContext.js ***!
-  \***********************************/
+/***/ "./src/components/myContext.js":
+/*!*************************************!*\
+  !*** ./src/components/myContext.js ***!
+  \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -212,9 +197,12 @@ var __webpack_exports__ = {};
   \*********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MyProvider": () => (/* reexport safe */ _MyProvider__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */   "MyProvider": () => (/* reexport safe */ _MyProvider__WEBPACK_IMPORTED_MODULE_0__.default),
+/* harmony export */   "myContext": () => (/* reexport safe */ _myContext__WEBPACK_IMPORTED_MODULE_1__.default)
 /* harmony export */ });
 /* harmony import */ var _MyProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MyProvider */ "./src/components/MyProvider.jsx");
+/* harmony import */ var _myContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./myContext */ "./src/components/myContext.js");
+
 
 })();
 

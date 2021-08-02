@@ -1,5 +1,5 @@
 import React from 'react'
-import { myContext } from '../contexts'
+import myContext from './myContext'
 import useMyContext from '../hooks/useMyContext'
 
 const MyProvider = ({ children }) => {
