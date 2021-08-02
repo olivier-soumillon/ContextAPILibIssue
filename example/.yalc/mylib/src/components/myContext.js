@@ -2,7 +2,9 @@ import { createContext } from 'react'
 
 const initialValue = {
     random: 'NOT SET',
-    doSomething: () => {}
+    doSomething: () => {
+        console.log('MyLib/components :: myContext :: doSomething', 'I\m the initial function')
+    }
 }
 
 const myContext = createContext(initialValue)

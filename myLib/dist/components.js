@@ -33,7 +33,7 @@ __webpack_require__.r(__webpack_exports__);
 var MyProvider = function MyProvider(_ref) {
   var children = _ref.children;
   var value = (0,_hooks_useMyContext__WEBPACK_IMPORTED_MODULE_2__.default)();
-  console.log('MyProvider :: value', value);
+  console.log('MyLib :: MyProvider :: value', value);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_myContext__WEBPACK_IMPORTED_MODULE_1__.default.Provider, {
     value: value
   }, children);
@@ -58,7 +58,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var initialValue = {
   random: 'NOT SET',
-  doSomething: function doSomething() {}
+  doSomething: function doSomething() {
+    console.log('MyLib/components :: myContext :: doSomething', 'I\m the initial function');
+  }
 };
 var myContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(initialValue);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (myContext);

@@ -27,7 +27,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var initialValue = {
   random: 'NOT SET',
-  doSomething: function doSomething() {}
+  doSomething: function doSomething() {
+    console.log('MyLib/contexts :: myContext :: doSomething', 'I\m the initial function');
+  }
 };
 var myContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(initialValue);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (myContext);

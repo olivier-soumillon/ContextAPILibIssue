@@ -5,7 +5,7 @@ import useMyContext from '../hooks/useMyContext'
 const MyProvider = ({ children }) => {
     const value = useMyContext()
 
-    console.log('MyProvider :: value', value)
+    console.log('MyLib :: MyProvider :: value', value)
 
     return (
         <myContext.Provider value={value}>
