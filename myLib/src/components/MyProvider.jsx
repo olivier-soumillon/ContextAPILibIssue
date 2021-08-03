@@ -1,8 +1,8 @@
 import React from 'react'
-import myContext from './myContext'
-import useMyContext from '../hooks/useMyContext'
+import { myContext } from '../contexts'
+import { useMyContext } from '../hooks'
 
-const MyProvider = ({ children }) => {
+function MyProvider ({ children }) {
     const value = useMyContext()
 
     console.log('MyLib :: MyProvider :: value', value)

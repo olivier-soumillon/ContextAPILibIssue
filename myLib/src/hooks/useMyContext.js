@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useMyContext = () => {
+function useMyContext () {
     const [state, setState] = useState('INITIAL VALUE')
 
     const doSomething = () => {

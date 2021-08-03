@@ -4,7 +4,8 @@ module.exports = {
     mode: 'development',
     entry: {
         'contexts': './src/contexts/index.js',
-        'components': { import: './src/components/index.js', /*dependOn: 'contexts'*/ }
+        'hooks': './src/hooks/index.js',
+        'components': './src/components/index.js'
     },
     target: 'node',
     devtool: 'source-map',
@@ -33,7 +34,8 @@ module.exports = {
             commonjs: 'react',
             commonjs2: 'react',
             amd: 'react',
-            root: 'react'
+            umd: 'react',
+            root: 'React'
         }
     }
 }

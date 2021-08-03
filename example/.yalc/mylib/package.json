@@ -5,7 +5,8 @@
   "main": "index.js",
   "exports": {
     "components": "./dist/components.js",
-    "contexts": "./dist/contexts.js"
+    "contexts": "./dist/contexts.js",
+    "hooks": "./dist/hooks.js"
   },
   "scripts": {
     "build": "webpack && yalc publish && yalc push",
@@ -16,5 +17,5 @@
   "peerDependencies": {
     "react": "17.0.2"
   },
-  "yalcSig": "6df3cc3a51355796c8169b4ec6350445"
+  "yalcSig": "cbd93a9bdc082e344cca6eb03b81450e"
 }

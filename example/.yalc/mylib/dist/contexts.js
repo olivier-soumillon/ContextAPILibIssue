@@ -6,7 +6,7 @@
 	else if(typeof exports === 'object')
 		exports["myLib"] = factory(require("react"));
 	else
-		root["myLib"] = factory(root["react"]);
+		root["myLib"] = factory(root["React"]);
 })(global, function(__WEBPACK_EXTERNAL_MODULE_react__) {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
@@ -37,9 +37,9 @@ var myContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext
 /***/ }),
 
 /***/ "react":
-/*!**************************************************************************************!*\
-  !*** external {"commonjs":"react","commonjs2":"react","amd":"react","root":"react"} ***!
-  \**************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** external {"commonjs":"react","commonjs2":"react","amd":"react","umd":"react","root":"React"} ***!
+  \****************************************************************************************************/
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
@@ -125,6 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "myContext": () => (/* reexport safe */ _myContext__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
 /* harmony import */ var _myContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./myContext */ "./src/contexts/myContext.js");
+
 
 })();
 

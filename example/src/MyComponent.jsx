@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react';
 //import { myContext } from 'mylib/dist/components'
 import { myContext } from 'mylib/dist/contexts'
 
-const MyComponent = () => {
+function MyComponent () {
     const { random, doSomething } = useContext(myContext)
 
     console.log('example :: MyComponent :: random', random)

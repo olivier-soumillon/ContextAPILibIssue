@@ -5,7 +5,8 @@
   "main": "index.js",
   "exports": {
     "components": "./dist/components.js",
-    "contexts": "./dist/contexts.js"
+    "contexts": "./dist/contexts.js",
+    "hooks": "./dist/hooks.js"
   },
   "scripts": {
     "build": "webpack && yalc publish && yalc push",

@@ -6,7 +6,7 @@
 	else if(typeof exports === 'object')
 		exports["myLib"] = factory(require("react"));
 	else
-		root["myLib"] = factory(root["react"]);
+		root["myLib"] = factory(root["React"]);
 })(global, function(__WEBPACK_EXTERNAL_MODULE_react__) {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
@@ -24,29 +24,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _myContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./myContext */ "./src/components/myContext.js");
-/* harmony import */ var _hooks_useMyContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks/useMyContext */ "./src/hooks/useMyContext.js");
+/* harmony import */ var _contexts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts */ "./src/contexts/index.js");
+/* harmony import */ var _hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../hooks */ "./src/hooks/index.js");
 
 
 
 
-var MyProvider = function MyProvider(_ref) {
+function MyProvider(_ref) {
   var children = _ref.children;
-  var value = (0,_hooks_useMyContext__WEBPACK_IMPORTED_MODULE_2__.default)();
+  var value = (0,_hooks__WEBPACK_IMPORTED_MODULE_2__.useMyContext)();
   console.log('MyLib :: MyProvider :: value', value);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_myContext__WEBPACK_IMPORTED_MODULE_1__.default.Provider, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contexts__WEBPACK_IMPORTED_MODULE_1__.myContext.Provider, {
     value: value
   }, children);
-};
+}
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyProvider);
 
 /***/ }),
 
-/***/ "./src/components/myContext.js":
-/*!*************************************!*\
-  !*** ./src/components/myContext.js ***!
-  \*************************************/
+/***/ "./src/contexts/index.js":
+/*!*******************************!*\
+  !*** ./src/contexts/index.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "myContext": () => (/* reexport safe */ _myContext__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _myContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./myContext */ "./src/contexts/myContext.js");
+
+
+
+/***/ }),
+
+/***/ "./src/contexts/myContext.js":
+/*!***********************************!*\
+  !*** ./src/contexts/myContext.js ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -59,11 +75,27 @@ __webpack_require__.r(__webpack_exports__);
 var initialValue = {
   random: 'NOT SET',
   doSomething: function doSomething() {
-    console.log('MyLib/components :: myContext :: doSomething', 'I\m the initial function');
+    console.log('MyLib/contexts :: myContext :: doSomething', 'I\m the initial function');
   }
 };
 var myContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(initialValue);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (myContext);
+
+/***/ }),
+
+/***/ "./src/hooks/index.js":
+/*!****************************!*\
+  !*** ./src/hooks/index.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useMyContext": () => (/* reexport safe */ _useMyContext__WEBPACK_IMPORTED_MODULE_0__.default)
+/* harmony export */ });
+/* harmony import */ var _useMyContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./useMyContext */ "./src/hooks/useMyContext.js");
+
+
 
 /***/ }),
 
@@ -93,7 +125,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var useMyContext = function useMyContext() {
+function useMyContext() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('INITIAL VALUE'),
       _useState2 = _slicedToArray(_useState, 2),
       state = _useState2[0],
@@ -107,16 +139,16 @@ var useMyContext = function useMyContext() {
     random: state,
     doSomething: doSomething
   };
-};
+}
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (useMyContext);
 
 /***/ }),
 
 /***/ "react":
-/*!**************************************************************************************!*\
-  !*** external {"commonjs":"react","commonjs2":"react","amd":"react","root":"react"} ***!
-  \**************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** external {"commonjs":"react","commonjs2":"react","amd":"react","umd":"react","root":"React"} ***!
+  \****************************************************************************************************/
 /***/ ((module) => {
 
 module.exports = __WEBPACK_EXTERNAL_MODULE_react__;
@@ -199,11 +231,9 @@ var __webpack_exports__ = {};
   \*********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "MyProvider": () => (/* reexport safe */ _MyProvider__WEBPACK_IMPORTED_MODULE_0__.default),
-/* harmony export */   "myContext": () => (/* reexport safe */ _myContext__WEBPACK_IMPORTED_MODULE_1__.default)
+/* harmony export */   "MyProvider": () => (/* reexport safe */ _MyProvider__WEBPACK_IMPORTED_MODULE_0__.default)
 /* harmony export */ });
 /* harmony import */ var _MyProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MyProvider */ "./src/components/MyProvider.jsx");
-/* harmony import */ var _myContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./myContext */ "./src/components/myContext.js");
 
 
 })();

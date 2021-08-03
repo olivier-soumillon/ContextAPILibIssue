@@ -1,1 +1,5 @@
-export { default as myContext } from './myContext'
+import myContext from './myContext'
+
+export {
+    myContext
+}

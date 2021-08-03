@@ -1,2 +1,5 @@
-export { default as MyProvider } from './MyProvider'
-export { default as myContext } from './myContext'
+import MyProvider from './MyProvider'
+
+export {
+    MyProvider
+}

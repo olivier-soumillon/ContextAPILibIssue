@@ -1,1 +1,5 @@
-export { default as MyProvider } from './MyProvider'
+import useMyContext from './useMyContext'
+
+export {
+    useMyContext
+}

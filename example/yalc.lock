@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "mylib": {
-      "signature": "6df3cc3a51355796c8169b4ec6350445",
+      "signature": "cbd93a9bdc082e344cca6eb03b81450e",
       "file": true
     }
   }
